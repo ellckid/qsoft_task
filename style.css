@@ -1,0 +1,407 @@
+body {
+  margin: 0;
+}
+
+/* решил делать без использования js, ведь так уже можно использовать сторонние библиотеки */
+
+/* из макета было не очень понятно, поэтому адаптивы сделал строго по ширине,
+для более плавного изменения можно использовать ширину и высоту экрана (vw и vh)  */
+
+/* для поиска меньше 768пкс сделал ширину сто процентов,
+опять же не понял из макета, должен ли он быть шириной с логотип + иконка профиля, но что тогда делать с полоской ? */
+
+/* на макетах меньшего размера партнёры через е, не уверен что это специально */
+
+/* на 375пкс над логотипом полоска 1пкс, не стал делать ее, просто добавил margin на 1пкс больше */
+
+/* картинки партнеров отличаются, по хорошему их экспортировать в разных размерах и использовать для адаптива */
+
+/* header */
+@media (min-width:1440px) {
+  .header_container_678px {
+    display: none;
+  }
+
+  header {
+    height: 80px;
+  }
+
+  .header_container {
+    display: flex;
+    width: 1240px;
+    gap: 61px;
+  }
+
+  .profile_img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile_name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: right;
+    letter-spacing: 0.01em;
+    color: #768298;
+    margin-left: 18px;
+    margin-right: 10px;
+  }
+
+  .search_border_container {
+    width: 835px;
+    gap: 60px;
+  }
+
+  .search {
+    width: 835px;
+    height: 36px;
+  }
+
+  .search_input {
+    outline: none;
+    border: 1px solid #EBEBF1;
+    border-radius: 5px;
+    padding-left: 38px;
+  }
+
+  .search_input.search_icon {
+    background-image: url("/public/search_icon.svg");
+    background-position: left 12px top 11px;
+  }
+
+  .left_border {
+    height: 100%;
+    width: 1px;
+    background-color: #EBEBF1;
+  }
+
+}
+
+@media (max-width:1439px) {
+  .header_container_678px {
+    display: none;
+  }
+
+  header {
+    height: 80px;
+  }
+
+  .header_container {
+    display: flex;
+    width: 728px;
+    gap: 50px;
+  }
+
+  .profile_img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile_name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: right;
+    letter-spacing: 0.01em;
+    color: #768298;
+    margin-left: 18px;
+    margin-right: 10px;
+  }
+
+  .search_border_container {
+    width: 344px;
+    gap: 50px;
+  }
+
+  .search {
+    width: 344px;
+    height: 36px;
+  }
+
+  .search_input {
+    outline: none;
+    border: 1px solid #EBEBF1;
+    border-radius: 5px;
+    padding-left: 38px;
+  }
+
+  .search_input.search_icon {
+    background-image: url("/public/search_icon.svg");
+    background-position: left 12px top 11px;
+  }
+
+  .left_border {
+    height: 100%;
+    width: 1px;
+    background-color: #EBEBF1;
+  }
+}
+
+@media (max-width:767px) {
+  header {
+    height: 105px;
+  }
+
+  .header_container {
+    display: none;
+  }
+
+  .header_container_678px {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo_profile_container {
+    display: flex;
+    width: 333px;
+    gap: 176px;
+    align-items: center;
+    margin: 17px auto 15px auto;
+  }
+
+  .profile_img {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+
+  .profile_name {
+    display: none;
+  }
+
+  .search_border_container {
+    flex-direction: column-reverse;
+    height: 40px;
+    gap: 0;
+  }
+
+  .search {
+    width: 100vw;
+
+    height: 40px;
+  }
+
+  .search_input {
+    outline: none;
+    border: none;
+    border-radius: 0;
+    padding-left: 50px;
+  }
+
+  .search_input {
+    border: none;
+  }
+
+  .left_border {
+    width: 100vw;
+    height: 1px;
+    background-color: #EBEBF1;
+    z-index: 1;
+    margin-bottom: 2px;
+  }
+
+  .search_input.search_icon {
+    background-image: url("/public/search_icon.svg");
+    background-position: left 23px top 12px;
+  }
+}
+
+
+
+header {
+  display: flex;
+  width: 100%;
+
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.header_container {
+  height: 80px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  cursor: pointer;
+  aspect-ratio: 4.5;
+  width: 135.04px;
+  height: 30.32px;
+}
+
+.search_border_container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+}
+
+.search_input {
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  margin-top: -3px;
+
+}
+
+.search_input.search_icon {
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.search_input.search_text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #BBC4D6;
+}
+
+.search_input::placeholder {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #BBC4D6;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+
+
+
+/* section  */
+
+@media (min-width:1440px) {
+  section {
+    width: 1240px;
+  }
+
+  .section_title {
+    font-size: 36px;
+  }
+
+  .section_content {
+    gap: 30px;
+  }
+
+  .partner_card {
+    width: 285.5px;
+    height: 118px;
+  }
+
+  .partner_card_img {
+    max-width: 234px;
+    max-height: 64px;
+  }
+}
+
+@media (max-width:1439px) {
+  section {
+    width: 728px;
+  }
+
+  .section_title {
+    font-size: 28px;
+  }
+
+  .section_content {
+    gap: 20px;
+  }
+
+  .partner_card {
+    width: 227px;
+    height: 118px;
+  }
+
+  .partner_card_img {
+    max-width: 199px;
+    max-height: 90px;
+  }
+}
+
+@media (max-width:767px) {
+  section {
+    width: 335px;
+  }
+
+  .section_title {
+    font-size: 28px;
+  }
+
+  .section_content {
+    gap: 20px;
+  }
+
+  .partner_card {
+    width: 335px;
+    height: 138px;
+  }
+
+  .partner_card_img {
+    max-width: 285px;
+    max-height: 90px;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.section_title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: #121920;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.section_content {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.partner_card {
+  cursor: pointer;
+  display: flex;
+
+  border: 1px solid #EBEBF1;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s;
+}
+
+.partner_card:hover {
+  box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
+}
